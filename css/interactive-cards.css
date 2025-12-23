@@ -1,0 +1,404 @@
+/* ============================================
+   INTERACTIVE CARDS - FLIP CARD & CRYPTO CARD
+   ============================================ */
+
+/* ============================================
+   FLIP CARD (Banking/Finance)
+   ============================================ */
+.flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 154px;
+    perspective: 1000px;
+    color: white;
+    margin: 0 auto;
+}
+
+.heading_8264 {
+    position: absolute;
+    font-size: 1em;
+    top: 0.75em;
+    left: 1em;
+    font-weight: 600;
+    text-shadow: -0.2px -0.2px 0.2px white, 0.2px -0.2px 0.2px gray,
+        -0.2px 0.2px 0.2px white, 0.2px 0.2px 0.2px gray;
+}
+
+.logo-card {
+    position: absolute;
+    top: 6.8em;
+    left: 11.7em;
+}
+
+.chip {
+    position: absolute;
+    top: 2.3em;
+    left: 1.5em;
+}
+
+.contactless {
+    position: absolute;
+    top: 3.5em;
+    left: 12.4em;
+}
+
+.number {
+    position: absolute;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.75em;
+    top: 7em;
+    left: 1.5em;
+}
+
+.date_8264 {
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.75em;
+    top: 9em;
+    left: 1.5em;
+    letter-spacing: 2px;
+}
+
+.cvc_number {
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.75em;
+    top: 9em;
+    left: 8.5em;
+    letter-spacing: 2px;
+}
+
+.cvc {
+    position: absolute;
+    font-weight: 600;
+    font-size: 5px;
+    top: 6.9rem;
+    left: 8rem;
+}
+
+.exp {
+    position: absolute;
+    font-weight: 600;
+    font-size: 5px;
+    top: 6.9rem;
+    left: 3.8rem;
+}
+
+.name {
+    position: absolute;
+    font-weight: 400;
+    font-size: 8.5px;
+    top: 15em;
+    left: 2em;
+    color: #123513;
+}
+
+.strip {
+    position: absolute;
+    background-color: white;
+    width: 15em;
+    height: 2.25em;
+    top: 0;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, #1a4d1b, #39ff14, #123513);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #123513, #39ff14, #1a4d1b);
+    transform: rotateY(180deg);
+}
+
+/* ============================================
+   CRYPTO CARD (Risk Prediction)
+   ============================================ */
+.crypto-card {
+    max-width: 360px;
+    width: 90%;
+    padding: 20px;
+    border-radius: 35px;
+    background: var(--dark-bg);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(57, 255, 20, 0.2);
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.crypto-logo {
+    font-weight: bold;
+    font-size: 1.2em;
+    background: linear-gradient(135deg, var(--neon-green) 0%, var(--text-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.open {
+    font-size: 0.85em;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.open:hover {
+    color: var(--neon-green);
+}
+
+.crypto-switch {
+    position: relative;
+    display: flex;
+    background: rgba(18, 53, 19, 0.3);
+    border-radius: 20px;
+    padding: 4px;
+    gap: 8px;
+    margin-bottom: 16px;
+    user-select: none;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+.crypto-switch input {
+    display: none;
+}
+
+.crypto-switch label {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #cccccc;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: color 0.3s;
+    font-size: 0.9em;
+}
+
+.crypto-switch input:checked + label {
+    color: var(--neon-green);
+}
+
+.crypto-switch .slider {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    width: calc((100% - 24px) / 4);
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.4) 0%, rgba(18, 53, 19, 0.6) 100%);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(0.5px);
+    border: 1px solid rgba(57, 255, 20, 0.5);
+    border-radius: 16px;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.4),
+        inset 0 -2px 4px rgba(57, 255, 20, 0.2),
+        0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.crypto-switch input:hover + label {
+    color: var(--neon-green);
+}
+
+#bitcoin:checked ~ .slider {
+    transform: translateX(0%);
+}
+
+#ethereum:checked ~ .slider {
+    transform: translateX(105%);
+}
+
+#solana:checked ~ .slider {
+    transform: translateX(214%);
+}
+
+#tether:checked ~ .slider {
+    transform: translateX(323%);
+}
+
+.price-infos {
+    margin-bottom: 16px;
+}
+
+.price-info .price {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--neon-green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-info .stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+.price-info .change {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.chart {
+    height: 90px;
+    background: rgba(18, 53, 19, 0.2);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid rgba(57, 255, 20, 0.2);
+}
+
+.chart svg {
+    width: 100%;
+    height: 100%;
+    display: none;
+    transform: translateX(2px) scale(1.05);
+}
+
+.chart path {
+    stroke: var(--neon-green);
+    stroke-width: 0.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 3s forwards;
+    fill: rgba(57, 255, 20, 0.2);
+    filter: drop-shadow(0 0 4px rgba(57, 255, 20, 0.5));
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.crypto-card:has(#bitcoin:checked) .chart #chart-bitcoin,
+.crypto-card:has(#ethereum:checked) .chart #chart-ethereum,
+.crypto-card:has(#solana:checked) .chart #chart-solana,
+.crypto-card:has(#tether:checked) .chart #chart-tether {
+    display: block;
+}
+
+.price-info {
+    display: none;
+}
+
+.crypto-card:has(#bitcoin:checked) .price-info.bitcoin,
+.crypto-card:has(#ethereum:checked) .price-info.ethereum,
+.crypto-card:has(#solana:checked) .price-info.solana,
+.crypto-card:has(#tether:checked) .price-info.tether {
+    display: block;
+}
+
+/* Interactive Cards Container */
+.interactive-cards-section {
+    padding: 60px 0;
+    background: linear-gradient(180deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+}
+
+.interactive-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: 0.95rem;
+    max-width: 350px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flip-card {
+        width: 200px;
+        height: 128px;
+        transform: scale(0.9);
+    }
+    
+    .crypto-card {
+        max-width: 100%;
+        padding: 16px;
+    }
+    
+    .interactive-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flip-card {
+        width: 180px;
+        height: 115px;
+        transform: scale(0.85);
+    }
+    
+    .crypto-switch label {
+        font-size: 0.75em;
+        padding: 6px 0;
+    }
+}
+
